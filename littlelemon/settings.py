@@ -37,11 +37,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django.contrib.sites',
+    # 'django.contrib.sites',
 
     #utils
     'rest_framework',
-
+    'rest_framework.authtoken',
+    'djoser',
     # custom apps
     'restaurant',
 ]
@@ -112,6 +113,15 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication',  # For Token-based authentication
+        'rest_framework.authentication.SessionAuthentication',  # For session-based authentication
+    ],
+}
+
+
+DJOSER={"USER_ID_FIELD":"username"}
 
 # Internationalization
 # https://docs.djangoproject.com/en/5.1/topics/i18n/
