@@ -93,7 +93,3 @@ python manage.py test
 
 Testing the API
 You can test the above endpoints using Postman or Insomnia.
-
----
-
-This guide is designed for quick and effective testing of the application. 🚀
